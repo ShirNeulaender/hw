@@ -1,0 +1,13 @@
+---
+- name : install vim and zip
+  hosts : servers
+
+  - list:
+        - zip
+        - vim
+
+  package:
+    name: "{{list}}"
+    state: latest
+
+
